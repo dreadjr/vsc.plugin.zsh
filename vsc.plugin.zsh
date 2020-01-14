@@ -3,6 +3,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
     _vsc_darwin_paths=(
         "/Applications/Visual Studio Code.app/Contents/MacOS/Electron"
         "$HOME/Applications/Visual Studio Code.app/Contents/MacOS/Electron"
+        "/Applications/Visual Studio Code - Insiders.app/Contents/MacOS/Electron"
+        "$HOME/Applications/Visual Studio Code - Insiders.app/Contents/MacOS/Electron"
     )
     for _vsc_path in $_vsc_darwin_paths; do
         if [[ -a $_vsc_path ]]; then
