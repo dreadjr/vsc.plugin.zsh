@@ -20,6 +20,17 @@ alias vscc='vsc .'
 
 
 
+
+# open -a "Visual Studio Code" &> /dev/null
+# if [ $? == 1 ]; then
+#   echo "Trying insiders"
+#   #open_command -a "Visual Studio Code"
+#   open -a "Visual Studio Code - Insiders" &> /dev/null
+# fi
+
+
+
+
 # alias vscode='code'
 
 # #
