@@ -19,14 +19,12 @@
 
 
 alias vscode='_open_with_vscode'
-if [[ "$OSTYPE" == darwin* ]]; then
 function _open_with_vscode {
     open -a "Visual Studio Code" $* &> /dev/null
     if [ $? == 1 ]; then
       open -a "Visual Studio Code - Insiders" $* &> /dev/null
     fi
 }
-fi
 
 
 # open -a "Visual Studio Code" &> /dev/null
