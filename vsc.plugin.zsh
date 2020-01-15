@@ -1,3 +1,12 @@
+#!/bin/zsh
+vscode_open() {
+    open -a "Visual Studio Code" $* &> /dev/null
+    if [ $? == 1 ]; then
+      open -a "Visual Studio Code - Insiders" $* &> /dev/null
+    fi
+}
+
+
 # if [[ "$OSTYPE" == darwin* ]]; then
 #     local _vsc_darwin_paths > /dev/null 2>&1
 #     _vsc_darwin_paths=(
@@ -19,13 +28,16 @@
 
 
 
-_open_with_vscode() {
-    open -a "Visual Studio Code" $* &> /dev/null
-    if [ $? == 1 ]; then
-      open -a "Visual Studio Code - Insiders" $* &> /dev/null
-    fi
-}
-alias vscode='_open_with_vscode'
+
+
+
+# _open_with_vscode() {
+#     open -a "Visual Studio Code" $* &> /dev/null
+#     if [ $? == 1 ]; then
+#       open -a "Visual Studio Code - Insiders" $* &> /dev/null
+#     fi
+# }
+# alias vscode='_open_with_vscode'
 
 
 # open -a "Visual Studio Code" &> /dev/null
