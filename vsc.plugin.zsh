@@ -18,13 +18,14 @@
 # alias vscc='vsc .'
 
 
-alias vscode='_open_with_vscode'
-function _open_with_vscode {
+
+_open_with_vscode() {
     open -a "Visual Studio Code" $* &> /dev/null
     if [ $? == 1 ]; then
       open -a "Visual Studio Code - Insiders" $* &> /dev/null
     fi
 }
+alias vscode='_open_with_vscode'
 
 
 # open -a "Visual Studio Code" &> /dev/null
